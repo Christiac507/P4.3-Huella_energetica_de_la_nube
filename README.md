@@ -8,6 +8,10 @@
 
 ---
 
+## 🎥 Video
+
+[▶ Ver el video de la práctica en YouTube](https://youtube.com/shorts/Q7xCGtCP6DY)
+
 ## 🌐 Página publicada
 
 [Abrir la calculadora en GitHub Pages](https://christiac507.github.io/P4.3-Huella_energetica_de_la_nube/C%C3%B3digo/)

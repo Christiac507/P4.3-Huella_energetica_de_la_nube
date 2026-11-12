@@ -8,10 +8,6 @@
 
 ---
 
-## 🎥 Video
-
-[▶ Ver el video de la práctica en YouTube](https://www.youtube.com/watch?v=PEGA_AQUI_EL_ID_DEL_VIDEO)
-
 ## 🌐 Página publicada
 
 [Abrir la calculadora en GitHub Pages](https://christiac507.github.io/P4.3-Huella_energetica_de_la_nube/C%C3%B3digo/)
@@ -62,11 +58,48 @@ quién paga el costo y 3 acciones para reducirlo
 
 | Carpeta | Contenido |
 |---------|-----------|
-| `Código/` | `index.html` (la calculadora) y `configuracion_make.md` (módulos e instrucciones de la IA) |
+| `Código/` | `index.html` (la calculadora), `Huella_Nube_Equipo#.blueprint.json` (blueprint exportado de Make) y `configuracion_make.md` (módulos e instrucciones de la IA) |
 | `Imágenes/` | Capturas del escenario, del tiempo de pantalla y de los resultados |
-| `Video/` | Video de la práctica (enlace arriba) |
+| `Video/` | `enlace.txt` con el enlace al video en YouTube |
 | `Resultados/` | Informe en PDF con investigación, resultados y preguntas |
 
 ## Resultados
 
-La tabla con los kWh y kg CO₂e por año, la verificación de la suposición de la IA para el video en streaming y las respuestas a las preguntas están en [`Resultados/`](Resultados/).
+Datos reales del celular (Bienestar digital, viernes 6 de noviembre) y de la cuenta de Google:
+
+| Actividad | Valor |
+|-----------|-------|
+| Video en streaming (TikTok) | 1.9 h/día |
+| Redes sociales (Instagram + WhatsApp) | 1.9 h/día |
+| Música, videollamadas, juegos | 0 |
+| Nube | 14.55 GB |
+| Consultas a IA | 6 al día |
+| Correos | 0 al día |
+
+**Estimación del agente de IA:** 146.82 kWh por año y 65.17 kg CO₂e por año (≈ 540 km en auto). La actividad que más consume es el video en streaming (≈ 69 kWh/año, 47 %).
+
+**Verificación:** la IA supuso 0.1 kWh por hora de video, que está dentro del rango de las fuentes (0.077 – 0.188 kWh). El total anual es correcto, pero el valor por semana que dio (3.41 kWh) no: con sus propias suposiciones son 2.82 kWh.
+
+El informe completo está en [`Resultados/`](Resultados/).
+
+## Preguntas de reflexión
+
+**1. ¿Por qué el consumo de energía de la nube es una externalidad? ¿Quién la paga realmente?**
+
+Es una externalidad porque cuando vemos videos, usamos redes sociales o le preguntamos algo a una IA, el precio que pagamos (muchas veces cero, o solo la suscripción) no incluye el daño ambiental de la electricidad y el agua que consumen los centros de datos y las redes. Esa electricidad en México se genera en buena parte con gas natural y combustóleo, lo que libera CO₂ y otros contaminantes. Los centros de datos además usan grandes cantidades de agua para enfriar sus equipos, muchas veces en zonas con escasez. El costo lo pagan las comunidades que viven cerca de las centrales eléctricas y de los centros de datos, la sociedad en general a través del cambio climático, y las generaciones futuras, no la empresa ni el usuario.
+
+**2. ¿Qué actividad digital genera más consumo en su equipo y por qué?**
+
+En nuestro caso, la actividad que más consume es el video en streaming, que en mi caso es TikTok, con unos 69 kWh por año, el 47 % del total según la estimación. El video es normalmente la actividad que más energía gasta porque transmite muchos datos por segundo y obliga a la pantalla y al router a estar encendidos durante horas. Además, es la actividad a la que más tiempo dedicamos al día, entre TikTok, YouTube y series. En comparación, un correo o una consulta a la IA gastan poca energía de forma individual, aunque las consultas a IA consumen más que una búsqueda normal porque requieren procesadores especiales en el centro de datos.
+
+**3. ¿Qué tan confiable es la estimación de la IA? ¿Qué suposición cambiaría más el resultado?**
+
+La estimación es útil para darse una idea del orden de magnitud, pero no es un dato exacto. La IA elige valores de kWh por hora que pueden variar mucho según la fuente: para el video, la IEA estima unos 0.077 kWh y Carbon Trust unos 0.188 kWh, más del doble. En nuestro resultado la IA usó 0.1 kWh por hora de video, que sí está dentro de ese rango. Además, al revisar sus cuentas encontramos que el total por año era correcto, pero el valor por semana (3.41 kWh) no: con sus propias suposiciones salen 2.82 kWh. La suposición que más cambia el resultado es la energía por hora de video, porque es la actividad con más horas; también influye si se cuenta o no el dispositivo y el router de la casa. Por eso la IA debe explicar sus suposiciones y nosotros compararlas con fuentes confiables.
+
+**4. ¿Cómo podría internalizarse este costo (impuestos, energía renovable en centros de datos, precios distintos)?**
+
+Una forma es aplicar un impuesto al carbono a la electricidad que consumen los centros de datos, para que las empresas paguen por sus emisiones y les convenga ahorrar energía. Otra es obligar a que los nuevos centros de datos usen energía renovable (solar o eólica) y reporten su consumo de agua, como ya se discute en Europa. También podrían ofrecerse precios distintos: planes más baratos para quien vea video en calidad estándar o descargue contenido en lugar de verlo varias veces en streaming. Finalmente, etiquetas que muestren el consumo de energía de cada servicio ayudarían a que el usuario conozca el costo real y elija mejor.
+
+**5. ¿Qué cambio en su uso digital están dispuestos a hacer?**
+
+Mi mayor consumo está en TikTok e Instagram, que juntas suman casi 4 horas al día. Estoy dispuesto a bajar una hora diaria entre las dos, sobre todo en la noche, y a usar el modo de ahorro de datos para que los videos se reproduzcan en menor calidad. También voy a limpiar mi almacenamiento en la nube, que está casi lleno (14.55 de 15 GB): borrar fotos repetidas de Google Fotos y reducir la copia de seguridad de WhatsApp (5 GB), quitando videos y audios que ya no necesito. Para medir si funciona, revisaré mi tiempo de pantalla cada semana y volveré a calcular mi huella en un mes.
